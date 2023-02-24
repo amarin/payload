@@ -40,7 +40,7 @@ func MustExtendJSON(origJSON json.RawMessage, data DataMap) (result json.RawMess
 
 // MakeJSON prepares json.RawMessage suitable to use as request data or response result.
 // If any key contains dot it became multilayer key f.e. pair "a.b.c": true became a>b>c=true.
-// Its a shorthand to call ExtendJSON([]byte(EmptyJSONObject), ...).
+// It is a shorthand to call ExtendJSON([]byte(EmptyJSONObject), ...).
 func MakeJSON(data DataMap) (result json.RawMessage, err error) {
 	return ExtendJSON([]byte(EmptyJSONObject), data)
 }

@@ -4,8 +4,9 @@ import (
 	"encoding/json"
 	"testing"
 
-	"git.media-tel.ru/railgo/payload"
 	"github.com/stretchr/testify/require"
+
+	"github.com/amarin/payload"
 )
 
 func TestExtendJSON(t *testing.T) {

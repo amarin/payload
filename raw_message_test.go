@@ -2,11 +2,12 @@ package payload_test
 
 import (
 	"fmt"
-	"github.com/amarin/payload"
 	"log"
 	"testing"
 
 	"github.com/stretchr/testify/require"
+
+	"github.com/amarin/payload"
 )
 
 func TestMakeRawMessage(t *testing.T) {

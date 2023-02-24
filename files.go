@@ -2,13 +2,13 @@ package payload
 
 import (
 	"fmt"
-	"io/ioutil"
+	"os"
 )
 
 // Load loads payload.RawMessage message from specified path.
 // Returns loaded RawMessage data or load error.
 func Load(path string) (data RawMessage, err error) {
-	if data, err = ioutil.ReadFile(path); err != nil {
+	if data, err = os.ReadFile(path); err != nil {
 		return nil, fmt.Errorf("%w: load file: %v: path %v", Error, err, path)
 	}
 
@@ -28,7 +28,7 @@ func MustLoad(path string) (data RawMessage) {
 
 // Save stores RawMessage data into specified file path. Returns error if save failed.
 func Save(data RawMessage, path string) (err error) {
-	if err = ioutil.WriteFile(path, data, 0644); err != nil {
+	if err = os.WriteFile(path, data, 0644); err != nil {
 		return fmt.Errorf("%v: file: write data: %w", Error, err)
 	}
 

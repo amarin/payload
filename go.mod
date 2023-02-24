@@ -1,9 +1,8 @@
 module github.com/amarin/payload
 
-go 1.17
+go 1.19
 
 require (
-	git.media-tel.ru/railgo/payload v0.1.5
 	github.com/stretchr/testify v1.7.0
 	github.com/tidwall/gjson v1.14.0
 	github.com/tidwall/sjson v1.2.4
